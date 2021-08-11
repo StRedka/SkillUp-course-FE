@@ -1,0 +1,51 @@
+.navbar-header {
+  text-align: center;
+}
+
+.navbar-toggle {
+  float: none;
+
+  margin-right: 0;
+}
+
+.navbar-inverse {
+  background-color: darken($color-dark, 4%);
+  margin-bottom: 0;
+  
+
+
+  .navbar-nav {
+    > li > a {
+      border-radius: 4px;
+      transition:  background-color 0.5s;
+    
+      &:focus, 
+      &:hover {  
+        background-color: $color-primary;
+      }
+    }
+  .active > a {
+      background-color: $color-primary-dark;
+      
+      &:focus, 
+      &:hover {  
+        background-color: $color-primary-light;
+      } 
+    }
+  }
+}
+
+
+
+.navbar-left > li {
+  margin: 5px 5px 5px 0;
+    
+  &:focus, 
+  &:hover {
+    background-color: $color-primary-dark; 
+  }
+}
+
+.navbar-right > li {
+  margin: 5px 0px 5px 5px;
+}
