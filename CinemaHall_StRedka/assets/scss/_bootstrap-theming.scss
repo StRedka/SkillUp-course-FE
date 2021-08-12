@@ -67,3 +67,28 @@
   }
 }
 
+.panel {
+  &-info>.panel-heading {
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  color: $color-white;
+  background-color: $color-accent;
+  border: none;
+  }
+  &-info {
+    border: none;
+    background-color: darken($color-white, 4%);
+    margin-bottom: $gap * 2;
+  }
+  &-body {
+    border: 1px solid $color-gray;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+.input {
+  &-lg,
+  &-group-lg > .form-control {
+    font-size: 0.875rem;
+  }
+}

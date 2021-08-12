@@ -1,4 +1,4 @@
-.header {
+.left-sidebar, .main, .header {
   margin-bottom: 80px;
 }
 
@@ -34,6 +34,27 @@
   background-color: #517ba2;
 }
 
+.panel-info > .panel-heading {
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  background-color: #df8a13;
+  border: none;
+}
+.panel-info {
+  border: none;
+  background-color: whitesmoke;
+  margin-bottom: 30px;
+}
+.panel-body {
+  border: 1px solid #d5d5d5;
+  border-radius: 0 0 4px 4px;
+}
+
+.input-lg, .input-group-lg > .form-control {
+  font-size: 0.875rem;
+}
+
 html {
   font-size: 16px;
   overflow-y: scroll;
@@ -50,6 +71,12 @@ a {
 a:hover, a:focus {
   text-decoration: none;
   color: #df8a13;
+}
+
+h1 {
+  font-family: "PT Serif", serif;
+  font-size: 48px;
+  margin-top: -10px;
 }
 
 .header-logo {
@@ -72,6 +99,81 @@ a:hover, a:focus {
   color: #ffffff;
   font-size: 1.15rem;
   letter-spacing: 0.2em;
+}
+
+.left-sidebar .panel:last-of-type {
+  margin-bottom: 0;
+}
+
+.vert-slider {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.vert-slider img {
+  width: 100%;
+}
+
+.user-login {
+  position: relative;
+}
+.user-login__tabs {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  border: none;
+}
+.user-login__tabs a {
+  background-color: transparent !important;
+  border: none !important;
+  color: #d5d5d5;
+  padding: 14px 5px 11px !important;
+}
+.user-login__tabs .active a {
+  color: #ffffff !important;
+}
+
+.site-news-item {
+  clear: both;
+  position: relative;
+}
+.site-news-item:not(:last-of-type) {
+  min-height: 85px;
+  margin-bottom: 15px;
+}
+.site-news-item:not(:last-of-type)::after {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  width: calc(100% - 85px);
+  height: 1px;
+  content: "";
+  background-color: #d5d5d5;
+}
+.site-news-item__image {
+  float: left;
+  width: 75px;
+  margin: 0 10px 10px 0;
+}
+.site-news-item__image img {
+  width: 100%;
+}
+.site-news-item__title {
+  margin-bottom: 10px;
+}
+.site-news-item__title a {
+  display: -webkit-box;
+  overflow: hidden;
+  height: 50px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.site-news-item__date {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #6f6f6f;
+  margin-top: -2px;
 }
 @media (min-width: 576px) {
   .header-logo__title {

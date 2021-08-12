@@ -17,3 +17,9 @@ a {
     color: $color-accent
   }
 }
+
+h1 {
+  font-family: $font-header;
+  font-size: $font-size * 3;
+  margin-top: -10px;
+}
