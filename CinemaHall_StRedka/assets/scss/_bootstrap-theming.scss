@@ -16,9 +16,15 @@
 
   .navbar-nav {
     > li > a {
-      border-radius: 4px;
       transition:  background-color 0.5s;
-    
+
+      @include sm {
+        text-align: center;
+      }
+      @include sm-min {
+        border-radius: 4px;
+      }
+      
       &:focus, 
       &:hover {  
         background-color: $color-primary;
@@ -37,15 +43,27 @@
 
 
 
-.navbar-left > li {
-  margin: 5px 5px 5px 0;
-    
-  &:focus, 
-  &:hover {
-    background-color: $color-primary-dark; 
+.navbar-left {
+  @include sm-min {
+    > li {
+      margin: 5px 5px 5px 0;
+    }
+
+  }
+  @include sm {
+    margin-bottom: 0;
   }
 }
 
-.navbar-right > li {
-  margin: 5px 0px 5px 5px;
+
+.navbar-right {
+  @include sm-min {
+    > li {
+      margin: 5px 0 5px 5px;
+    }
+  }
+  @include sm {
+    margin-top: 0;
+  }
 }
+
