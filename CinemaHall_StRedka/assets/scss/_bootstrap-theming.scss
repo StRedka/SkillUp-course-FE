@@ -9,14 +9,15 @@
 }
 
 .navbar-inverse {
-  background-color: darken($color-dark, 4%);
   margin-bottom: 0;
-  
+
+  background-color: darken($color-dark, 4%);
+
 
 
   .navbar-nav {
     > li > a {
-      transition:  background-color 0.5s;
+      transition: background-color 0.5s;
 
       @include sm {
         text-align: center;
@@ -24,19 +25,19 @@
       @include sm-min {
         border-radius: 4px;
       }
-      
-      &:focus, 
-      &:hover {  
+
+      &:focus,
+      &:hover {
         background-color: $color-primary;
       }
     }
-  .active > a {
+    .active > a {
       background-color: $color-primary-dark;
-      
-      &:focus, 
-      &:hover {  
+
+      &:focus,
+      &:hover {
         background-color: $color-primary-light;
-      } 
+      }
     }
   }
 }
@@ -48,7 +49,6 @@
     > li {
       margin: 5px 5px 5px 0;
     }
-
   }
   @include sm {
     margin-bottom: 0;
@@ -68,18 +68,24 @@
 }
 
 .panel {
-  &-info>.panel-heading {
-  font-size: 1.25rem;
-  letter-spacing: 0.08em;
-  color: $color-white;
-  background-color: $color-accent;
-  border: none;
-  }
+  box-shadow: none;
+
   &-info {
+    margin-bottom: $gap * 2;
+
     border: none;
     background-color: darken($color-white, 4%);
-    margin-bottom: $gap * 2;
   }
+  &-info > .panel-heading {
+    letter-spacing: 0.08em;
+
+    color: $color-white;
+    border: none;
+    background-color: $color-accent;
+
+    font-size: 1.25rem;
+  }
+
   &-body {
     border: 1px solid $color-gray;
     border-radius: 0 0 4px 4px;
@@ -91,4 +97,8 @@
   &-group-lg > .form-control {
     font-size: 0.875rem;
   }
+}
+
+.thumbnail {
+  transition: background-color 0.25s;
 }

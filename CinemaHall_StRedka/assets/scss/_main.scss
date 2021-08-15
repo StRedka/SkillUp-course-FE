@@ -1,3 +1,167 @@
 .main {
   @extend %margin-bottom-lg;
+
+  .site-search {
+    margin-bottom: $gap * 3;
+  }
+
+  .user-login {
+    margin-bottom: $gap * 4;
+  }
+}
+
+.new-movies,
+.topweek-movies {
+  &-row {
+    margin-right: -$gap / 2;
+    margin-bottom: -$gap;
+    margin-left: -$gap / 2;
+  }
+  &-item {
+    margin-bottom: $gap;
+    padding-right: $gap / 2;
+    padding-left: $gap / 2;
+
+    &__thumbnail {
+      margin-bottom: 0;
+    }
+
+    &__title {
+      margin: 0;
+
+      font-size: $font-size;
+      font-weight: bold;
+
+      @include text-shortener;
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__caption {
+      text-align: center;
+    }
+
+    &:hover {
+      .thumbnail {
+        border-color: $color-accent;
+        background-color: $color-accent;
+      }
+
+      h3 {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.site-news-item {
+  position: relative;
+
+  clear: both;
+
+
+  &:not(:last-of-type) {
+    min-height: 85px;
+    margin-bottom: $gap;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: -4px;
+
+      width: calc(100% - 85px);
+      height: 1px;
+
+      content: "";
+
+      background-color: $color-gray;
+    }
+  }
+  &:hover {
+    a {
+      color: $color-accent;
+    }
+    .thumbnail {
+      border-color: $color-accent;
+      background-color: $color-accent;
+    }
+  }
+
+
+  &__image {
+    float: left;
+
+    width: 75px;
+    margin: 0 10px 10px 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+  a {
+    transition: color 0.25s;
+
+    @include block-shortener(1rem, 1.5, 50px, 2);
+  }
+
+  &__date {
+    text-align: right;
+
+    color: $color-gray-dark;
+
+    font-size: 0.8rem;
+  }
+}
+
+.cinema-news {
+  h3 {
+    color: $color-primary;
+
+    @include xs {
+      font-size: 1.25rem;
+    }
+  }
+  &-item {
+    &:hover {
+      h3 > a {
+        color: $color-accent;
+      }
+      .thumbnail {
+        border-color: $color-accent;
+        background-color: $color-accent;
+      }
+      .btn-warning {
+        background-color: $color-accent;
+      }
+    }
+
+    &__thumbnail {
+      margin-bottom: 0;
+
+      transition: background-color 0.25s;
+    }
+    &__image {
+      width: 100%;
+    }
+    &__description {
+      text-align: justify;
+    }
+
+    &__button {
+      float: right;
+
+      margin-bottom: $gap * 2;
+
+      transition: background-color 0.25s;
+    }
+    h3 > a {
+      transition: color 0.25s;
+    }
+  }
 }
