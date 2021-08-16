@@ -1,0 +1,26 @@
+.movie {
+  font-size: 1.2em;
+
+  &-item {
+    white-space: nowrap;
+
+    &:not(:last-of-type) {
+      margin-right: $gap;
+    }
+  }
+
+  &__badge {
+    font-size: 0.8em;
+  }
+
+  &__well {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.movie-comment-form {
+  &__button {
+    float: right;
+  }
+}

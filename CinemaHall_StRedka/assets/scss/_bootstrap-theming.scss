@@ -70,6 +70,10 @@
 .panel {
   box-shadow: none;
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
   &-info {
     margin-bottom: $gap * 2;
 
@@ -92,7 +96,8 @@
   }
 }
 
-.input {
+.input,
+.btn-lg {
   &-lg,
   &-group-lg > .form-control {
     font-size: 0.875rem;
@@ -101,4 +106,13 @@
 
 .thumbnail {
   transition: background-color 0.25s;
+}
+
+.embed-responsive {
+  border: 1px solid $color-gray;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+.well {
+  border-color: $color-gray;
 }
